@@ -1,6 +1,6 @@
 from datetime import datetime
 from datetime import time
-
+from collections import ChainMap
 
 
 def nome():# usuario ira digitar seu nome e projeto.
@@ -36,24 +36,26 @@ def dict():
     projecty = projecti()
     date_start()
     finish()
-    users[projecty] = {'name': nome, 'date': date_start().strftime('%d/%m/%Y'), 'start':date_start().strftime('%H:%M')}
+    users={project: {'name': nome, 'date': date_start().strftime('%d/%m/%Y'), 'start':date_start().strftime('%H:%M')}}
     print(f"{name.title()} iniciou o projeto {projecty.title()} às {date_start().strftime('%H:%M')} no dia {date_start().strftime('%d/%m/%Y')} ")
-    print(users)
     return users
 
 
 def fday():
-    global fim
+    global users
     #funcao cria um dicionario de fim do trabalho
     fim = {}
     finish()
-    fim = {'finish_h': hour_finish.strftime('%H:%M')}
+    nome = name
+    projecty = project
+    users={projecty :{'name': nome, 'date': date_start().strftime('%d/%m/%Y'), 'start':date_start().strftime('%H:%M'), 'finish':finish().strftime('%H:%M')}}
     print(f"Dia finalizado as {hour_finish.strftime('%H:%M')}")
-    print(fim)
-
+    return users
 
 def dicio():
-    dic1 = users
-    dic2 = fim
-    dic1.update(dic2)
-    return dic1
+    global users
+    fday()
+    nome = name
+    projecty = project
+    users[projecty] = {'name': nome, 'date': date_start().strftime('%d/%m/%Y'), 'start':date_start().strftime('%H:%M'), 'finish':finish().strftime('%H:%M')}
+    return users

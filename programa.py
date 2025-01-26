@@ -1,9 +1,11 @@
+from collections import ChainMap
 from interface import *
 from informacoes import *
 from salve_arq import *
 
 
-arq = 'daywork.json'
+
+arq = 'daywork.csv'
 
 file ='diatrabalho.json'
 cabecalho("MENU")
@@ -17,9 +19,10 @@ while True:
     elif caso == 2:
         fday()
         
+        
     elif caso == 3:
-        dicio()
         createfile(arq)
+       
         
         
 
