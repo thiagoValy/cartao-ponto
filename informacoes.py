@@ -27,20 +27,6 @@ def finish():# Ao findar o dia de trabalho a sistema registra o dia e a hora que
     return hour_finish
 
 
-def dict():
-    #Funcao cria um dicionario par iniciar o trabalho
-    global users
-    users = {}
-    date_start()
-    nome = name
-    projecty = projecti()
-    date_start()
-    finish()
-    users={project: {'name': nome, 'date': date_start().strftime('%d/%m/%Y'), 'start':date_start().strftime('%H:%M')}}
-    print(f"{name.title()} iniciou o projeto {projecty.title()} às {date_start().strftime('%H:%M')} no dia {date_start().strftime('%d/%m/%Y')} ")
-    return users
-
-
 def fday():
     global users
     #funcao cria um dicionario de fim do trabalho
@@ -49,8 +35,21 @@ def fday():
     nome = name
     projecty = project
     users={projecty :{'name': nome, 'date': date_start().strftime('%d/%m/%Y'), 'start':date_start().strftime('%H:%M'), 'finish':finish().strftime('%H:%M')}}
-    print(f"Dia finalizado as {hour_finish.strftime('%H:%M')}")
     return users
+
+
+def dict():
+    #Funcao cria um dicionario par iniciar o trabalho
+    global users
+    users = {}
+    date_start()
+    nome()
+    projecti()
+    date_start()
+    finish()
+    users={project: {'name': nome, 'date': date_start().strftime('%d/%m/%Y'), 'start':date_start().strftime('%H:%M')}}
+    return users
+
 
 def dicio():
     global users

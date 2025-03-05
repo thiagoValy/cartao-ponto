@@ -13,22 +13,19 @@ menu(['Iniciar Dia ', 'Encerrar Dia', 'Verificar Ponto', 'Sair'])
 while True:
     caso = int(input("opção: "))
     if caso == 1:
-        nome()
         dict()
         
     elif caso == 2:
         fday()
-        
-        
-    elif caso == 3:
-        createfile(arq)
-       
-        
-        
+        createfile()
 
+    elif caso == 3:
+        print(dicio())
+       
     elif caso == 4:
         print("Sair do Sistema")
         break    
+
     else:
         print("Digite uma opção Válida")
             
