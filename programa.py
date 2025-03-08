@@ -2,9 +2,6 @@ from collections import ChainMap
 from interface import *
 from informacoes import *
 from salve_arq import *
-from draw import * 
-from matplotlib import pyplot as plt 
-from pathlib import Path
 import csv
 import os
 
@@ -28,7 +25,7 @@ while True:
         createfile()
 
     elif caso == 3:
-      print(dicio())
+        showinformation()
        
     elif caso == 4:
         print("Sair do Sistema")

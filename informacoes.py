@@ -47,7 +47,7 @@ def dict():
     projecti()
     date_start()
     finish()
-    users={'name': nome, 'project': project, 'date': date_start().strftime('%d/%m/%Y'), 'start':date_start().strftime('%H:%M')}
+    users={'name': nome, 'project': project, 'day': date_start().strftime('%d/%m/%Y'), 'start':date_start().strftime('%H:%M')}
     return users
 
 
@@ -56,5 +56,5 @@ def dicio():
     fday()
     nome = name
     projecty = project
-    users = {'name': nome, 'project':project, 'date': date_start().strftime('%d/%m/%Y'), 'start':date_start().strftime('%H:%M'), 'finish':finish().strftime('%H:%M')}
+    users = {'name': nome, 'project':project, 'day': date_start().strftime('%d/%m/%Y'), 'start':date_start().strftime('%H:%M'), 'finish':finish().strftime('%H:%M')}
     return users
